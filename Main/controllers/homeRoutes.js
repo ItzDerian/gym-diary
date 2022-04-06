@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {  } = require('../models'); // models to be imported
+const { } = require('../models'); // models to be imported
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
