@@ -2,25 +2,28 @@ const router = require('express').Router();
 const { } = require('../models'); // models to be imported
 const withAuth = require('../utils/auth');
 
+// main page routes: 'http://localhost:PORT/'
+// 'req.session.logged_in = true' required (withAuth)
+
 router.get('/', withAuth, async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    // const projectData = await Project.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
+    // // get all rows
+    // const _ = await .findAll({
+    //   // // tables included for rendering
+    //   // include: [
+    //   //   {
+    //   //     model: ,
+    //   //     attributes: [''],
+    //   //   },
+    //   // ],
     // });
 
-    // Serialize data so the template can read it
-    // const projects = projectData.map((project) => project.get({ plain: true }));
+    // // Serialize data so the template can read it
+    // const __ = _.map((project) => project.get({ plain: true }));
 
-    // Pass serialized data and session flag into template
-    // res.render('homepage', { 
-    //   projects, 
-    //   logged_in: req.session.logged_in 
+    // // render data in handlebars
+    // res.render('', { 
+    //   __, 
     // });
   } catch (err) {
     res.status(500).json(err);
@@ -29,19 +32,24 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/ /:id', withAuth, async (req, res) => {
   try {
-    // const projectData = await Project.findByPk(req.params.id, {
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
+
+    // // get single row
+    // const _ = await .findByPk(req.params.id, {
+    //   // // tables included
+    //   // include: [
+    //   //   {
+    //   //     model: ,
+    //   //     attributes: [''],
+    //   //   },
+    //   // ],
     // });
 
-    // const project = projectData.get({ plain: true });
+    // // serialize the data
+    // const __ = _.get({ plain: true });
 
-    // res.render('project', {
-    //   ...project,
+    // // render in handlebars
+    // res.render('', {
+    //   ...__,
     //   logged_in: req.session.logged_in
     // });
   } catch (err) {
@@ -49,6 +57,7 @@ router.get('/ /:id', withAuth, async (req, res) => {
   }
 });
 
+// get User - **do we need this?
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -68,6 +77,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+// render login page - from handlebars?
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -75,6 +85,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
+  // render login page
   res.render(' ');
 });
 
