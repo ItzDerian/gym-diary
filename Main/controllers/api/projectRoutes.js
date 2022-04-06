@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// user login routes: 'http://localhost:PORT/
+
 router.post('/', withAuth, async (req, res) => {
   try {
     // // create new row 
