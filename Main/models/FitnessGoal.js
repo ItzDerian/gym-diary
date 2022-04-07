@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class FitnessGoal extends Model {}
 
-Project.init(
+FitnessGoal.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,37 +11,29 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    goal: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
       allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
-      },
+      model: 'user',
+      key: 'id',
     },
   },
+    },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'fitnessGoal',
   }
 );
+//const seedFitnessGoal = () => FitnessGoal.bulkCreate(FitnessGoalData);
 
-module.exports = Project;
+module.exports = FitnessGoal;

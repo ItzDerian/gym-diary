@@ -1,0 +1,99 @@
+[
+  {
+  "exercise": "Push-Ups",
+  "targetArea": "Upper Body"
+  },
+  {
+  "exercise": "Dumbbell Pullover",
+  "targetArea": "Upper Body"
+  },
+  {
+  "exercise": "Overhead Triceps Extension",
+  "targetArea": "Upper Body"
+  },
+  {
+  "exercise": "Pull-Ups",
+  "targetArea": "Upper Body"
+  },  
+  {
+  "exercise": "Bent-Over Row",
+  "targetArea": "Upper Body"
+  },    
+  {
+  "exercise": "Dumbbell Bench Press",
+  "targetArea": "Upper Body"
+  },    
+  {
+  "exercise": "Standing Biceps",
+  "targetArea": "Upper Body"
+  },   
+  {
+  "exercise": "Chest Fly",
+  "targetArea": "Upper Body"
+  },   
+  {
+  "exercise": "Front Planks",
+  "targetArea": "Core"
+  },
+  {
+  "exercise": "Side Planks",
+  "targetArea": "Core"
+  }, 
+  {
+  "exercise": "Vertical Leg Crunches",
+  "targetArea": "Core"
+  },  
+  {
+  "exercise": "Flutter Kicks",
+  "targetArea": "Core"
+  }, 
+  {
+  "exercise": "Russian Twists",
+  "targetArea": "Core"
+  }, 
+  {
+  "exercise": "Forearm Plank Rock",
+  "targetArea": "Core"
+  }, 
+  {
+  "exercise": "Side Ben",
+  "targetArea": "Core"
+  },   
+  {
+  "exercise": "Jackknife",
+  "targetArea": "Core"
+  }, 
+  {
+  "exercise": "Lunges",
+  "targetArea": "Lower Body"
+  }, 
+  {
+  "exercise": "Deadlifts",
+  "targetArea": "Lower Body"
+  }, 
+  {
+  "exercise": "Leg Curls Leg Extensions",
+  "targetArea": "Lower Body"
+  },  
+  {
+  "exercise": "Calf Raises",
+  "targetArea": "Lower Body"
+  },   
+  {
+  "exercise": "Glute Bridges",
+  "targetArea": "Lower Body"
+  },  
+  {
+  "exercise": "Glute Hamstring Raise",
+  "targetArea": "Lower Body"
+  },  
+  {
+  "exercise": "Squats",
+  "targetArea": "Lower Body"
+  },  
+  {
+  "exercise": "Hip Thrusts",
+  "targetArea": "Lower Body"
+  }  
+ 
+]
