@@ -1,20 +1,5 @@
 [
   {
-<<<<<<< HEAD
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
-=======
     "name": "Sam",
     "email": "Sam@gmail.com",
     "password": "password12345",
@@ -68,6 +53,5 @@
     "weight": 175,
     "height": 62
     
->>>>>>> 8b4a49751bb06723078744cea764d875746c4f2b
   }
 ]
