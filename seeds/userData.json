@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "name": "Sal",
     "email": "sal@hotmail.com",
     "password": "password12345"
@@ -13,5 +14,60 @@
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
     "password": "password12345"
+=======
+    "name": "Sam",
+    "email": "Sam@gmail.com",
+    "password": "password12345",
+    "dateOfBirth": "1996-02-01",
+    "weight": 225,
+    "height": 72
+    
+  },
+  {
+    "name": "Tina",
+    "lastName": "Sims",
+    "email": "tina@gmail.com",
+    "password": "password12345",
+    "dateOfBirth": "2001-04-12",
+    "weight": 155,
+    "height": 63
+   
+  },
+  {
+    "name": "Charles",
+    "email": "charles@gmail.com",
+    "password": "password12345",
+    "dateOfBirth": "1978-03-05",
+    "weight": 185,
+    "height": 69
+   
+  },
+  {
+    "name": "Mark",
+    "email": "mark@gmail.com",
+    "password": "password12345",
+    "dateOfBirth": "1999-01-07",
+    "weight": 250,
+    "height": 74
+   
+  },
+  {
+    "name": "Kathy",
+    "email": "kathy@gmail.com",
+    "password": "password12345",
+    "dateOfBirth": "1977-06-08",
+    "weight": 202,
+    "height": 64
+  
+  },
+  {
+    "name": "Monica",
+    "email": "Monica@gmail.com",
+    "password": "password12345",
+    "dateOfBirth": "2003-06-08",
+    "weight": 175,
+    "height": 62
+    
+>>>>>>> 8b4a49751bb06723078744cea764d875746c4f2b
   }
 ]

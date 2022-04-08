@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class FitnessGoal extends Model {}
+class Exercise extends Model {}
 
-FitnessGoal.init(
+Exercise.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,29 +11,23 @@ FitnessGoal.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    goal: {
+    exercise: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    description: {
+    }, 
+    targetArea: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-      model: 'user',
-      key: 'id',
+      values: ['Upper Body', 'Core', 'Lower Body']
     },
   },
-    },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'fitnessGoal',
+    modelName: 'exercise',
   }
 );
-//const seedFitnessGoal = () => FitnessGoal.bulkCreate(FitnessGoalData);
 
-module.exports = FitnessGoal;
+
+module.exports = Exercise;
