@@ -46,14 +46,7 @@ User.init(
     height: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },
-    // fitness_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
+    }
   },
   {
     hooks: {

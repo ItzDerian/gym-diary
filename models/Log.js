@@ -16,33 +16,33 @@ Log.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-     exercise_id: {
+    exercise_id: {
       type: DataTypes.INTEGER,
       references: {
-      model: 'exercise',
-      key: 'id',
+        model: 'exercise',
+        key: 'id',
+      },
     },
-  },
     sets: {
       type: DataTypes.INTEGER,
       allowNull: true,
-  },
+    },
     reps: {
       type: DataTypes.INTEGER,
       allowNull: true,
-  },
-  //   cardioTime: {
-  //     type: DataTypes.TIME,
-  //     defaultValue: '00:00:00',
-  // },
+    },
+    // cardioTime: {
+    //   type: DataTypes.TIME,
+    //   defaultValue: '00:00:00',
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-      model: 'user',
-      key: 'id',
+        model: 'user',
+        key: 'id',
+      },
     },
   },
-},
   {
     sequelize,
     freezeTableName: true,
@@ -50,6 +50,5 @@ Log.init(
     modelName: 'log',
   }
 );
-
 
 module.exports = Log;

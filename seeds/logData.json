@@ -1,0 +1,141 @@
+[
+    {
+    "exercise_id": 1,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 2,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 3,
+     "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 4,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 5,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 6,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 7,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 8,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 1
+    },
+    {
+    "exercise_id": 9,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 2
+    },
+    {
+    "exercise_id": 10,
+    "sets": 4,
+    "reps": 8,
+    "user_id": 2
+    },
+    {
+    "exercise_id": 11,
+    "sets": 5,
+    "reps": 8,
+    "user_id": 2
+    },
+    {
+    "exercise_id": 12,
+    "sets": 2,
+    "reps": 12,
+    "user_id": 2
+    },
+    {
+    "exercise_id": 13,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 2
+    }, 
+    {
+    "exercise_id": 14,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 2
+    },      
+    {
+    "exercise_id": 15,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 2
+    },  
+    {
+    "exercise_id": 16,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    },  
+    {
+    "exercise_id": 17,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    }, 
+    {
+    "exercise_id": 18,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    }, 
+    {
+    "exercise_id": 19,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    }, 
+    {
+    "exercise_id": 20,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    },
+    {
+    "exercise_id": 21,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    },  
+    {
+    "exercise_id": 22,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    },
+    {
+    "exercise_id": 23,
+    "sets": 3,
+    "reps": 10,
+    "user_id": 3
+    }        
+  ]
+  
