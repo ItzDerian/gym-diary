@@ -1,30 +1,33 @@
 const router = require('express').Router();
-const { } = require('../models'); // models to be imported
+const {User, Log, Exercise } = require('../models'); // models to be imported
 const withAuth = require('../utils/auth');
 
 // main page routes: 'http://localhost:PORT/'
 // 'req.session.logged_in = true' required (withAuth)
 
+// // uses withAuth()
 router.get('/', withAuth, async (req, res) => {
   try {
-    // // get all rows
-    // const _ = await .findAll({
-    //   // // tables included for rendering
-    //   // include: [
-    //   //   {
-    //   //     model: ,
-    //   //     attributes: [''],
-    //   //   },
-    //   // ],
-    // });
+    // get all rows
+    const logData = await Log.findAll({
+      // tables included for rendering
+      include: [
+        {
+          model: Exercise,
+          attributes: ['exercise', 'targetArea'],
+        },
+      ],
+    });
 
     // // Serialize data so the template can read it
-    // const __ = _.map((project) => project.get({ plain: true }));
+    const logs = logData.map((log) => log.get({ plain: true }));
 
     // // render data in handlebars
     // res.render('', { 
     //   __, 
     // });
+
+    res.status(200).json(logs);
   } catch (err) {
     res.status(500).json(err);
   }

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Log, Exercise } = require('../../models');
 
 // user login routes: 'http://localhost:PORT/users/'
 
