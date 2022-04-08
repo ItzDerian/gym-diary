@@ -31,10 +31,6 @@ Log.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    // cardioTime: {
-    //   type: DataTypes.TIME,
-    //   defaultValue: '00:00:00',
-    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
