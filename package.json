@@ -20,13 +20,8 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
-<<<<<<< HEAD
     "nodemon": "^2.0.15",
     "sequelize": "^6.3.5"
-=======
-    "sequelize": "^6.18.0",
-    "sequelize-cli": "^6.4.1"
->>>>>>> 8b4a49751bb06723078744cea764d875746c4f2b
   },
   "devDependencies": {
     "eslint": "^7.12.1",
