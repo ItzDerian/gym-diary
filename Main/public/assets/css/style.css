@@ -1,24 +1,79 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+body {
+  text-decoration:none;
+  background-color: #FEF6F3;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
+nav {
   text-decoration: none;
-  font-size: 100%;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+a {
+  text-decoration: none;
+}
+.nav-item {
+  text-decoration: none;
+  color: black;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.nav-link {
+  text-decoration: none;
+}
+
+.btn-login {
+    background: #F5504A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FA653D, #F5504A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FA653D, #F5504A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.btn-rounded {
+  border-radius: 35px;
+}
+
+section {
+  background-color: #FFF7F5;
+  margin-left: 10em;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.hero aside{
+  display: flex;
+  cursor: default;
+}
+.homepage-image {
+  margin-left: 0em;
+}
+
+.popular-exercises {
+  font-size: 35px;
+  cursor: auto;
+}
+
+.workout-cards {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: default;
+  margin-left: -10em;
+}
+
+footer{
+  padding: 2em 4em;
+  background: linear-gradient(to bottom, #FA653D, #F5504A);
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  align-items: start;
+  font-size: 16px;
+}
+
+footer ul {
+  list-style: none;
 }

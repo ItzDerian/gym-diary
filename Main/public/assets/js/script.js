@@ -3,7 +3,7 @@
 // var APIKey = "";
 
 // //EVENT CLICK BUTTON TO RETURN API RESULTS
-// $(.calorieEnter).on('click', function(event) {
+// $(.calorieBtn).on('click', function(event) {
 // event.preventDefault;
 // var workoutInput = $(this).val();
 
@@ -22,3 +22,28 @@
 
 
 //DISPLAY DATA
+
+//CALORIES BURNED PER MINUTE
+//1LB=.453592KG
+//(MET * BODY WEIGHT(KG) * 3.5)/200
+
+//FUNCTION FOR EXERCISE OPTIONS
+//var userExercise = document.querySelector('#userExercise');
+// var userBW = document.querySelector('#userBW');
+
+
+// if (userExercise === "Situps") {
+//     (2.65 * userBW.innerHTML * 3.5) / 200;
+//   } else if (userExercise === "Crunches") {
+//     (2.65 * userBW.innerHTML * 3.5) / 200;
+//   } else if (userExercise === "Pullups") {
+//    (3.1 * userBW.innerHTML * 3.5) / 200;
+//   } else if (userExercise === "Pushups") {
+//     (3.3 * userBW.innerHTML * 3.5) / 200;
+//   } else if (userExercise === "Lunges") {
+//     (4.1 * userBW.innerHTML * 3.5) / 200;
+//   } else if (userExercise === "Running stair incline") {
+//     (15 * userBW.innerHTML * 3.5) / 200;
+//   } else {
+//     (12.3 * userBW.innerHTML * 3.5) / 200;
+//   }
