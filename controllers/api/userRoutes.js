@@ -1,5 +1,7 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Log, Exercise } = require('../../models');
+
+// user login routes: 'http://localhost:PORT/users/'
 
 router.post('/', async (req, res) => {
   try {
@@ -43,6 +45,8 @@ router.post('/login', async (req, res) => {
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
+    // reroute or render?
+    
   } catch (err) {
     res.status(400).json(err);
   }

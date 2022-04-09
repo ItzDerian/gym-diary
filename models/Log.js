@@ -31,7 +31,7 @@ Log.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-       user_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',

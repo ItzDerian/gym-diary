@@ -34,7 +34,7 @@ User.init(
       validate: {
         len: [8],
       },
-    },
+      },
     dateOfBirth: {
       type: DataTypes.DATE,
       allowNull: false,
