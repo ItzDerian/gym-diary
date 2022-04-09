@@ -14,11 +14,11 @@ Exercise.init(
     exercise: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
+    }, 
     targetArea: {
       type: DataTypes.STRING,
       allowNull: false,
-      values: ['Upper Body', 'Core', 'Lower Body'],
+      values: ['Upper Body', 'Core', 'Lower Body']
     },
   },
   {
@@ -28,5 +28,6 @@ Exercise.init(
     modelName: 'exercise',
   }
 );
+
 
 module.exports = Exercise;

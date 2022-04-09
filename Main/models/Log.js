@@ -25,17 +25,21 @@ Log.init(
     },
     sets: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
     },
     reps: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
+    },
+    exercise_minutes: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'user',
+      key: 'id',
       },
     },
   },
