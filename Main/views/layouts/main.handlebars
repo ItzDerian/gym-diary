@@ -1,44 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <title>Gym Diary</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600&display=swap" rel="stylesheet">
+  </head>
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Tech Blog!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
+  <body>
+    <header class="header">
+    <div class="header-inner">
+    <div class="container-fluid px-lg-5">
+    <nav class="navbar navbar-expand-lg my-navbar">
+      <a class="navbar-brand" href="#"><span class="logo">
+        <a href="/"><img src="https://i.imgur.com/qcfhrCV.png" title="source: imgur.com" /></a>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-dark" href="/">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-dark" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Developers</a>
+        </li>
+      </ul>
+    <form class="form-inline my-2 my-lg-0">
+      {{#if logged_in}}
+      <a href="/profile" class="btn btn-primary btn-login btn-rounded">Profile</a>
+      <button id="logout" class="btn btn-primary btn-login btn-rounded">Logout</button>
+      {{else}}
+      <a href="/login" class="btn btn-primary btn-login btn-rounded">Login</a>
+      {{/if}}
+    </form>
+    </div>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </nav>
+    </div>
   </div>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+</header>
+{{#if logged_in}}
+    <script src="/js/logout.js"></script>
+{{/if}}
+<main>
+  {{{body}}}
+</main>
 </body>
+
 
 </html>
