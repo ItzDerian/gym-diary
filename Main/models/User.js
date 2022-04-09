@@ -35,6 +35,18 @@ User.init(
         len: [8],
       },
     },
+    dateOfBirth: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    weight: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    height: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   },
   {
     hooks: {

@@ -1,8 +1,10 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { User, Exercise, Log } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const exerciseData = require('./exerciseData.json');
+const logData = require('./logData.json');
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,12 +14,18 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  const workout = await Exercise.bulkCreate(exerciseData, {
+    returning: true,
+  });
+
+  for (const logs of logData) {
+    await Log.create({
+      ...logs,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
+
+
 
   process.exit(0);
 };
