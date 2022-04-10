@@ -32,20 +32,20 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [4],
       },
     },
     dateOfBirth: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     weight: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     height: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     }
   },
   {

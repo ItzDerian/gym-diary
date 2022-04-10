@@ -8,26 +8,39 @@ const withAuth = require('../utils/auth');
 // // uses withAuth()
 router.get('/', withAuth, async (req, res) => {
   try {
-    // get all rows
-    const logData = await Log.findAll({
-      // tables included for rendering
-      include: [
-        {
-          model: Exercise,
-          attributes: ['exercise', 'targetArea'],
-        },
-      ],
-    });
-
+    console.log('test1');
+    // get all rows by user_id
+    // const userLog = await User.findByPk(req.session.user_id, {
+    //   attributes: { exclude: ['password'] },
+    //   include: [
+    //     {
+    //       model: Log,
+    //       attributes: [
+    //         'id',
+    //         [
+    //           sequelize.fn('DATE', sequelize.col('log_date')),
+    //           'log_date',
+    //         ], 
+    //         'sets', 
+    //         'reps'
+    //       ],
+    //       include: {
+    //         model: Exercise,
+    //         attributes: ['exercise', 'targetArea'],
+    //       }
+    //     },
+    //   ],
+    // })
+    console.log('test2');
     // // Serialize data so the template can read it
-    const logs = logData.map((log) => log.get({ plain: true }));
-
-    // // render data in handlebars
-    // res.render('', { 
-    //   __, 
-    // });
-
-    res.status(200).json(logs);
+    // const logs = userLog.map((log) => log.get({ plain: true }));
+    // console.log(logs);
+    // render data in handlebars
+    res.render('homepage', 
+    { 
+      // logs, 
+    }
+    );
   } catch (err) {
     res.status(500).json(err);
   }
@@ -63,18 +76,37 @@ router.get('/ /:id', withAuth, async (req, res) => {
 // get User - **do we need this?
 router.get('/profile', withAuth, async (req, res) => {
   try {
+    console.log('test1');
     // Find the logged in user based on the session ID
-    // const userData = await User.findByPk(req.session.user_id, {
-    //   attributes: { exclude: ['password'] },
-    //   include: [{ model: Project }],
-    // });
-
-    // const user = userData.get({ plain: true });
-
-    // res.render('profile', {
-    //   ...user,
-    //   logged_in: true
-    // });
+   const userLog = await User.findByPk(req.sessions.user_id, {
+    attributes: { exclude: ['password'] },
+    include: [
+      {
+        model: Log,
+        attributes: [
+          'id',
+          [
+            sequelize.fn('DATE', sequelize.col('log_date')),
+            'log_date',
+          ], 
+          'sets', 
+          'reps'
+        ],
+        include: {
+          model: Exercise,
+          attributes: ['exercise', 'targetArea'],
+        }
+      },
+    ],
+  })
+  console.log('test2');
+  // // Serialize data so the template can read it
+  const logs = userLog.map((log) => log.get({ plain: true }));
+  console.log(logs);
+  // render data in handlebars
+  res.render('homepage', { 
+    logs, 
+  });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -84,12 +116,12 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/ ');
+    res.redirect('/');
     return;
   }
 
   // render login page
-  res.render(' ');
+  res.render('login');
 });
 
 module.exports = router;
