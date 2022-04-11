@@ -38,7 +38,8 @@ router.get('/', withAuth, async (req, res) => {
     // render data in handlebars
     res.render('homepage', 
     { 
-      // logs, 
+      // logs,
+      logged_in: req.session.logged_in
     }
     );
   } catch (err) {
@@ -115,10 +116,10 @@ router.get('/profile', withAuth, async (req, res) => {
 // render login page - from handlebars?
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
-  }
+  // if (req.session.logged_in) {
+  //   res.redirect('/');
+  //   return;
+  // }
 
   // render login page
   res.render('login');
