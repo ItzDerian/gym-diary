@@ -38,8 +38,17 @@
 
 <form class="forming">
         <div class="form-group ">
-            <label for="wName">What Workout Did You Do?</label>
-            <input type="text" class="form-control" id="wName" placeholder="Name of Workout">
+            <label for="exerciseName">What Exercise Did You Do?</label>
+              <select name="Exercise" id="Exercise">    
+    <option value="Situps">Situps</option>
+    <option value="Crunches">Crunches</option>
+    <option value="Pullups" >Pullups</option>
+     <option value="Pushups">Pushups</option>
+    <option value="Lunges">Lunges</option>
+    <option value="Running up stairs" >Running up stairs</option>       
+     <option value="Jump Rope" >Jump Rope</option>  
+  </select>
+  {{!-- <input type="text" class="form-control" id="wName" placeholder="Name of Workout"> --}}
         </div>
         <div class="form-group">
             <label for="RepsDone">How Many Reps Did You Do?</label>
@@ -49,6 +58,12 @@
             <label for="SetsDone">How many sets?</label>
             <input type="number" class="form-control" id="SetsDone" placeholder="Number of Sets">
         </div>
-        <p>Estimated Calories Burned :</p>
-        <button type="button" class="btn btn-primary">Submit Workout</button>
+        <div class="form-group">
+            <label for="Weight">What is your weight today?</label>
+            <input type="number" class="form-control" id="Weight" placeholder="Number in lbs">
+        </div>
+        <p class="calBurned">Estimated Calories Burned<span id="calBurned"></span></p>
+        <button type="button" class="btn btn-primary submit-workout-btn">Submit Workout</button>
     </form>
+
+    <script src="./js/logscript.js"></script>
