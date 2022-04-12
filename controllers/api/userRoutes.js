@@ -5,8 +5,11 @@ const { User, Log, Exercise } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
+    console.log('test1');
+    console.log(req.body);
     const userData = await User.create(req.body);
-
+   
+    console.log('test2');
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -41,12 +44,11 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
     // reroute or render?
-    
   } catch (err) {
     res.status(400).json(err);
   }
