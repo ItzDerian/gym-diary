@@ -35,7 +35,7 @@ User.init(
         len: [4],
       },
     },
-    dateOfBirth: {
+    date_of_birth: {
       type: DataTypes.DATE,
       allowNull: true,
     },
