@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
     <Section>
         <div >
             <p>LOG A</p>
@@ -34,4 +34,21 @@
             <p>Calories Burned:</p>
         </div>
     </section>
-</div>
+</div> --}}
+
+<form class="forming">
+        <div class="form-group ">
+            <label for="wName">What Workout Did You Do?</label>
+            <input type="text" class="form-control" id="wName" placeholder="Name of Workout">
+        </div>
+        <div class="form-group">
+            <label for="RepsDone">How Many Reps Did You Do?</label>
+            <input type="number" class="form-control" id="RepsDone" placeholder="Number of Reps">
+        </div>
+        <div class="form-group">
+            <label for="SetsDone">How many sets?</label>
+            <input type="number" class="form-control" id="SetsDone" placeholder="Number of Sets">
+        </div>
+        <p>Estimated Calories Burned :</p>
+        <button type="button" class="btn btn-primary">Submit Workout</button>
+    </form>
