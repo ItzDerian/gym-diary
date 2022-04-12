@@ -33,10 +33,10 @@ const signupFormHandler = async (event) => {
   const height = document.querySelector('#height-signup').value.trim();
   const weight = document.querySelector('#weight-signup').value.trim();
 
-  if (name && email && password && date_of_birth  && height && weight ) {
+  if (name && email && password && date_of_birth && height && weight ) {
     const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password, date_of_birth , height, weight }),
+      body: JSON.stringify({ name, email, password, date_of_birth , weight, height }),
       headers: { 'Content-Type': 'application/json' },
     });
 

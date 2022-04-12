@@ -1,44 +1,48 @@
 const router = require('express').Router();
 const {User, Log, Exercise } = require('../models'); // models to be imported
 const withAuth = require('../utils/auth');
+const sequelize = require('../config/connection');
 
 // main page routes: 'http://localhost:PORT/'
 // 'req.session.logged_in = true' required (withAuth)
 
-// // uses withAuth()
+// uses withAuth()
 router.get('/', withAuth, async (req, res) => {
   try {
     console.log('test1');
     // get all rows by user_id
-    // const userLog = await User.findByPk(req.session.user_id, {
-    //   attributes: { exclude: ['password'] },
-    //   include: [
-    //     {
-    //       model: Log,
-    //       attributes: [
-    //         'id',
-    //         [
-    //           sequelize.fn('DATE', sequelize.col('log_date')),
-    //           'log_date',
-    //         ], 
-    //         'sets', 
-    //         'reps'
-    //       ],
-    //       include: {
-    //         model: Exercise,
-    //         attributes: ['exercise', 'targetArea'],
-    //       }
-    //     },
-    //   ],
-    // })
-    console.log('test2');
-    // // Serialize data so the template can read it
-    // const logs = userLog.map((log) => log.get({ plain: true }));
-    // console.log(logs);
-    // render data in handlebars
+    console.log(req.session.user_id);
+    const user = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        {
+          model: Log,
+          attributes: [
+            'id',
+            [
+              sequelize.fn('DATE', sequelize.col('log_date')),
+              'log_date',
+            ], 
+            'sets', 
+            'reps'
+          ],
+          include: {
+            model: Exercise,
+            attributes: ['exercise'],
+          }
+        },
+      ],
+    });
+
+    console.log(user);
+    // Serialize data so the template can read it
+    const userLog = user.get({ plain: true });
+    console.log('test2')
+    console.log(userLog);
+    // // render data in handlebars
     res.render('homepage', 
     { 
-      // logs,
+      userLog,
       logged_in: req.session.logged_in
     }
     );
