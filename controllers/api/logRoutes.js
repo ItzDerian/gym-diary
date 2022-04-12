@@ -43,11 +43,11 @@ router.get('/log', withAuth, async (req, res) => {
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    // // create new row 
-    // const _ = await _.create({
-    //   ...req.body,
-    //   user_id: req.session.user_id,
-    // });
+    // create new row 
+    const newLog = await Log.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
 
     // either reroute or render
 
