@@ -77,3 +77,13 @@ footer{
 footer ul {
   list-style: none;
 }
+
+.forming{
+  padding: 10px 30px 30px 10px;
+  margin: auto ;
+  border-radius: 25px;
+  border: 2px;
+  border-style: solid;
+  width:30%;
+  align-content: center;
+}
