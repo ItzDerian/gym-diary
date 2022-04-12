@@ -47,41 +47,41 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/log/:date', withAuth, async (req, res) => {
+router.get('/log/', withAuth, async (req, res) => {
   try {
-    console.log('test1');
-    // get single day
-    const logs = await Log.findAll({
-      attributes: [
-        'id',
-        'user_id',
-        'log_date', 
-        'sets', 
-        'reps'
-      ],
-      include: {
-        model: Exercise,
-        attributes: ['exercise', 'targetArea'],
-      },
-      where: [
-        sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date), 
-        // for when session is set up
-        {user_id: req.session.user_id},
+    // console.log('test1');
+    // // get single day
+    // const logs = await Log.findAll({
+    //   attributes: [
+    //     'id',
+    //     'user_id',
+    //     'log_date', 
+    //     'sets', 
+    //     'reps'
+    //   ],
+    //   include: {
+    //     model: Exercise,
+    //     attributes: ['exercise', 'targetArea'],
+    //   },
+    //   where: [
+    //     sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date), 
+    //     // for when session is set up
+    //     {user_id: req.session.user_id},
 
-        // // for testing:
-        // {user_id: req.params.id}
-      ]
-    });
-    console.log(logs)
+    //     // // for testing:
+    //     // {user_id: req.params.id}
+    //   ]
+    // });
+    // console.log(logs)
 
-    // serialize the data
-    const dailyLog = logs.map(log => log.get({ plain: true }));
+    // // serialize the data
+    // const dailyLog = logs.map(log => log.get({ plain: true }));
 
-    console.log(dailyLog);
+    // console.log(dailyLog);
 
     // render in handlebars
     res.render('logentry', {
-      ...dailyLog,
+      // ...dailyLog,
       logged_in: req.session.logged_in
     });
   } catch (err) {
