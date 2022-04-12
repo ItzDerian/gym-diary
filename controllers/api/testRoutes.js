@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {User, Log, Exercise } = require('../../models'); // models to be imported
-const { sequelize } = require('../../models/Exercise');
+const sequelize = require('../../config/connection');
 
 // Create new user profile:
 
