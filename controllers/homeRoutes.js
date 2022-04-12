@@ -47,7 +47,7 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/ /:id', withAuth, async (req, res) => {
+router.get('/log', withAuth, async (req, res) => {
   try {
 
     // // get single row
@@ -64,18 +64,18 @@ router.get('/ /:id', withAuth, async (req, res) => {
     // // serialize the data
     // const __ = _.get({ plain: true });
 
-    // // render in handlebars
-    // res.render('', {
-    //   ...__,
-    //   logged_in: req.session.logged_in
-    // });
+    // render in handlebars
+    res.render('logentry', {
+      // ...__,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // get User - **do we need this?
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/log', withAuth, async (req, res) => {
   try {
     console.log('test1');
     // Find the logged in user based on the session ID
@@ -105,7 +105,7 @@ router.get('/profile', withAuth, async (req, res) => {
   const logs = userLog.map((log) => log.get({ plain: true }));
   console.log(logs);
   // render data in handlebars
-  res.render('homepage', { 
+  res.render('logentry', { 
     logs, 
   });
   } catch (err) {
