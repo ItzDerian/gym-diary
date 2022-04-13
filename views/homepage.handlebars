@@ -1,38 +1,23 @@
 <section class="hero">
-  <h2>Come and Log Your Fitness Goals </h2>
-  <h2>With Gym Diary</h2>
+  <h2 style="color: white">Come and Log Your Fitness Goals <br> With Gym Diary</h2>
   <h3>Already a member of our community? <a href="/login">Sign In</a></h3>
 
-  <div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgAM6ta_MI3CKb0lUh7kI-X4yUY7jGcycLkA&usqp=CAU" alt="homepage-image" height="300" width="1000">
-{{!-- <style>
-  {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgAM6ta_MI3CKb0lUh7kI-X4yUY7jGcycLkA&usqp=CAU");
-}
-</style> --}}
+  <div class="homepage-img">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBbw3m9i5P-Ham5C0OH2lR9ReZQP-GYd3tA&usqp=CAU" class="img-fluid" alt="people running in gym image" height="300" width="1000"> 
   </div>
-  {{!-- <div class="hero-stats">
-    <p>Test</p> --}}
-  </div>
+
+{{!-- empty gym image option --}}
+  {{!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfvfxtZxWka6j0Pz6kMu6JwgXbO22fYrsNSA&usqp=CAU --}}
+
+
+<section class="youtube-api">
+  <p class="player-text">Recommended Exercises</p>
+  <iframe id="player" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+  frameborder="0" style="border: solid 6px #faa23d"></iframe>
 </section>
 
-<section class="recommended-exercises">
-  <p>Recommended Exercises</p>
-  <div class="workout-cards">
-    <a href="#"><img src="https://i.imgur.com/u8XEbdu.png" title="source: imgur.com" /></a>
-    <a href="#"><img src="https://i.imgur.com/cAv16rV.png" title="source: imgur.com" /></a>
-    <a href="#"><img src="https://i.imgur.com/AaTKpl8.png" title="source: imgur.com" /></a>
-  </div>
-</section>
-
-<section class="daily-logs">
-  <p>Daily Workouts</p>
-  <div class="workout-cards">
-    <a href="#"><img src="https://i.imgur.com/u8XEbdu.png" title="source: imgur.com" /></a>
-    <a href="#"><img src="https://i.imgur.com/cAv16rV.png" title="source: imgur.com" /></a>
-    <a href="#"><img src="https://i.imgur.com/AaTKpl8.png" title="source: imgur.com" /></a>
-  </div>
-</section>
+{{!-- <div id="player"></div> --}}
 
 
 {{#if logged_in}}
@@ -47,8 +32,12 @@
   <span class="f-exercises">
    <h3><a href="/login">Log</a></h3>
   </span>
+   <span class="f-exercises">
+   <h3><a href="">Diary</a></h3>
+  </span>
   <span class="f-GitHub">
     <h3><a href="https://github.com/ItzDerian/gym-diary.git" target="_blank" >Support</a></h3>
   </span>
-
 </footer>
+
+ <script src="./js/youtubescript.js"></script>

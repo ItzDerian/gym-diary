@@ -4,7 +4,7 @@
 
 body {
   text-decoration: none;
-  background-color: #f8f1c6;
+  background-color: #58c8d9;
 }
 
 nav {
@@ -17,6 +17,7 @@ a {
 .nav-item {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 .nav-link {
@@ -47,37 +48,23 @@ a {
 }
 
 section {
-  background-color: #f8f1c6;
+  background-color: #58c8d9;
   margin-left: 10em;
   font-family: 'Barlow Condensed', sans-serif;
 }
 
-.hero aside {
-  display: flex;
-  cursor: default;
-}
-.homepage-image {
-  margin-left: 0em;
-  background-size: cover;
+.homepage-img img {
+  border: solid 6px #faa23d;
 }
 
-.recommended-exercises {
-  font-size: 35px;
-  cursor: auto;
+.player-text {
+  color: #fff;
+  font-size: 32px;
+  text-decoration: underline;
 }
 
-.daily-logs {
-  font-size: 35px;
-  cursor: auto;
-}
-
-.workout-cards {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  white-space: nowrap;
-  cursor: default;
-  margin-left: -10em;
+#player{
+  border: solid 6px #faa23d;
 }
 
 footer {
@@ -96,12 +83,12 @@ footer ul {
   list-style: none;
 }
 
-.forming{
+.forming {
   padding: 10px 30px 30px 10px;
-  margin: auto ;
+  margin: auto;
   border-radius: 25px;
   border: 2px;
   border-style: solid;
-  width:30%;
+  width: 30%;
   align-content: center;
 }
