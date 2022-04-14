@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {User, Log, Exercise } = require('../models'); // models to be imported
+const { User, Log, Exercise } = require('../models'); // models to be imported
 const withAuth = require('../utils/auth');
 const sequelize = require('../config/connection');
 
@@ -17,31 +17,26 @@ router.get('/diary', withAuth, async (req, res) => {
           model: Log,
           attributes: [
             'id',
-            [
-              sequelize.fn('DATE', sequelize.col('log_date')),
-              'log_date',
-            ], 
-            'sets', 
-            'reps'
+            [sequelize.fn('DATE', sequelize.col('log_date')), 'log_date'],
+            'sets',
+            'reps',
           ],
           include: {
             model: Exercise,
             attributes: ['exercise'],
-          }
+          },
         },
       ],
     });
-    console.log('test1')
+    console.log('test1');
     // Serialize data so the template can read it
     const userLog = user.get({ plain: true });
 
     // render data in handlebars
-    res.render('diary', 
-    { 
+    res.render('diary', {
       userLog,
-      logged_in: req.session.logged_in
-    }
-    );
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -55,8 +50,8 @@ router.get('/log/', withAuth, async (req, res) => {
     //   attributes: [
     //     'id',
     //     'user_id',
-    //     'log_date', 
-    //     'sets', 
+    //     'log_date',
+    //     'sets',
     //     'reps'
     //   ],
     //   include: {
@@ -64,7 +59,7 @@ router.get('/log/', withAuth, async (req, res) => {
     //     attributes: ['exercise', 'targetArea'],
     //   },
     //   where: [
-    //     sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date), 
+    //     sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date),
     //     // for when session is set up
     //     {user_id: req.session.user_id},
 
@@ -80,9 +75,14 @@ router.get('/log/', withAuth, async (req, res) => {
     // console.log(dailyLog);
 
     // render in handlebars
+
+    const exercise = await Exercise.findAll();
+    console.log('exercise111', exercise.length);
+
     res.render('logentry', {
       // ...dailyLog,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      exercise: exercise,
     });
   } catch (err) {
     res.status(500).json(err);
