@@ -31,7 +31,7 @@ Log.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    exercise_minutes: {
+    calBurned: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

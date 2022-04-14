@@ -1,4 +1,5 @@
-<form class="forming">
+<div>
+  <form class="forming new-project-form">
         <div class="form-group ">
             <label for="exerciseName">What Exercise Did You Do?</label>
               <select name="Exercise" id="Exercise">    
@@ -25,7 +26,27 @@
             <input type="number" class="form-control" id="Weight" placeholder="Number in lbs">
         </div>
         <p class="calBurned">Estimated Calories Burned<span id="calBurned"></span></p>
-        <button type="button" class="btn btn-primary submit-workout-btn">Submit Workout</button>
-    </form>
+        <button type="submit" class="btn btn-primary submit-workout-btn">Submit Workout</button>
+  </form>
+</div>
 
-    <script src="./js/logscript.js"></script>
+{{!--<div>
+  {{#if submit-workout-btn}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each logs as |log|}}
+    <div class="row mb-2">
+      <div clsas ="col-md-8">
+        <h4><a href="/log/{{log.id}}">{{log.Sets}} </a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{log.sets}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>--}}
+
+<script async src="./js/logscript.js"></script>
