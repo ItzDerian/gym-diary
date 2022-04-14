@@ -7,7 +7,7 @@ const sequelize = require('../config/connection');
 // 'req.session.logged_in = true' required (withAuth)
 
 // uses withAuth()
-router.get('/', withAuth, async (req, res) => {
+router.get('/diary', withAuth, async (req, res) => {
   try {
     // get all rows by user_id
     const user = await User.findByPk(req.session.user_id, {
@@ -36,7 +36,7 @@ router.get('/', withAuth, async (req, res) => {
     const userLog = user.get({ plain: true });
 
     // render data in handlebars
-    res.render('homepage', 
+    res.render('diary', 
     { 
       userLog,
       logged_in: req.session.logged_in

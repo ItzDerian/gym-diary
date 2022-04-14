@@ -49,7 +49,8 @@ router.get('/:date', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     // create new row 
-    console.log("test1")
+    console.log(req.body);
+    console.log("test1");
     const newLog = await Log.create({
       ...req.body,
       user_id: req.session.user_id,
