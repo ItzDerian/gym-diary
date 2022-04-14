@@ -55,6 +55,7 @@ section {
 
 .homepage-img img {
   border: solid 6px #faa23d;
+  border-radius: 25px;
 }
 
 .player-text {
@@ -63,8 +64,9 @@ section {
   text-decoration: underline;
 }
 
-#player{
+#player {
   border: solid 6px #faa23d;
+  border-radius: 25px;
 }
 
 footer {
@@ -84,6 +86,34 @@ footer ul {
 }
 
 .forming {
+  padding: 10px 30px 30px 10px;
+  margin: auto;
+  border-radius: 25px;
+  border: 2px;
+  border-style: solid;
+  width: 30%;
+  align-content: center;
+}
+
+.login {
+  margin: 2em;
+  border-radius: 25px;
+  border: 2px;
+  border-style: solid;
+  width: 30%;
+  align-content: center;
+}
+
+.signup {
+  margin: 2em;
+  border-radius: 25px;
+  border: 2px;
+  border-style: solid;
+  width: 30%;
+  align-content: center;
+}
+
+.log-container {
   padding: 10px 30px 30px 10px;
   margin: auto;
   border-radius: 25px;
