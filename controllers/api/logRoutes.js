@@ -12,16 +12,17 @@ router.get('/:date', withAuth, async (req, res) => {
       attributes: [
         'id',
         'user_id',
-        'log_date', 
-        'sets', 
-        'reps'
+        'log_date',
+        'sets',
+        'reps',
+        'calBurned'
       ],
       include: {
         model: Exercise,
         attributes: ['exercise', 'targetArea'],
       },
       where: [
-        sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date), 
+        sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), d),
         // for when session is set up
         {user_id: req.session.user_id},
 
