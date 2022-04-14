@@ -2,17 +2,12 @@
   <form class="forming new-project-form">
         <div class="form-group ">
             <label for="exerciseName">What Exercise Did You Do?</label>
-            
-              <select name="Exercise" id="Exercise"> 
-                   
-    <option value="Situps">Situps</option>
-    <option value="Crunches">Crunches</option>
-    <option value="Pullups" >Pullups</option>
-     <option value="Pushups">Pushups</option>
-    <option value="Lunges">Lunges</option>
-    <option value="Running up stairs" >Running up stairs</option>       
-     <option value="Jump Rope" >Jump Rope</option>  
-  </select>
+             <select name="Exercise" id="Exercise">       
+                {{#each exercise}}
+                <option value="{{this.dataValues.id}}">{{this.dataValues.exercise}}</option>
+                {{/each}}   
+            </select>
+       
   {{!-- <input type="text" class="form-control" id="wName" placeholder="Name of Workout"> --}}
         </div>
         <div class="form-group">
@@ -51,4 +46,4 @@
   {{/if}}
 </div>--}}
 
-<script async src="./js/logscript.js"></script>
+<script src="/js/logscript.js"></script>
