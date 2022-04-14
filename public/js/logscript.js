@@ -5,19 +5,19 @@
 //(MET * BODY WEIGHT(KG) * 3.5)/200
 
 //FUNCTION FOR EXERCISE OPTIONS
-//var userExerciseEL = document.querySelector('#Exercise');
-//var userBWEL = document.querySelector('#Weight');
-//var reps = document.querySelector('#RepsDone');
-//var sets = document.querySelector('#SetsDone');
-//var calBurnedEL = document.querySelector('#calBurned');
+//const userExerciseEL = document.querySelector('#Exercise');
+//const userBWEL = document.querySelector('#Weight');
+//const reps = document.querySelector('#RepsDone');
+//const sets = document.querySelector('#SetsDone');
+//const calBurnedEL = document.querySelector('#calBurned');
 
 // document
 //   .querySelector('.submit-workout-btn')
 //   .addEventListener('click', function (e) {
-//     var exercise = exercise.value;
-//     var userBW = weight.value;
+//     const exercise = exercise.value;
+//     const userBW = weight.value;
 //     console.log(userExercise);
-//     var calBurned = 0;
+//     const calBurned = 0;
 
 //     if (exercise === 'Situps') {
 //       calBurned = (2.65 * userBW * 3.5) / 200;
@@ -40,18 +40,18 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  var reps = document.querySelector('#RepsDone').value;
-  var sets = document.querySelector('#SetsDone').value;
-  var weight = document.querySelector('#Weight').value;
+  const reps = document.querySelector('#RepsDone').value;
+  const sets = document.querySelector('#SetsDone').value;
+  const weight = document.querySelector('#Weight').value;
 
-  var selectExercise = document.querySelector('#Exercise');
-  var exercise_id = selectExercise.value;
+  const selectExercise = document.querySelector('#Exercise');
+  const exercise_id = selectExercise.value;
 
-  var exercise = selectExercise[selectExercise.selectedIndex].innerHTML;
+  const exercise = selectExercise[selectExercise.selectedIndex].innerHTML;
 
-  var userBW = weight;
+  const userBW = weight;
   // console.log(userExercise);
-  var calBurned;
+  const calBurned;
 
   if (exercise === 'Situps') {
     calBurned = (2.65 * userBW * 3.5) / 200;
