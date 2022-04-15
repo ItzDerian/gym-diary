@@ -1,4 +1,7 @@
-<h2 class ="text-center">Hello - {{user.name}}<span>Week XXXX</span></h2>
+
+<h2 class ="text-center hello">Hello - {{user.name}}<span>Week XXX</span></h2>
+{{!-- {{format_date log_date}} --}}
+
 <div class="container">
   <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
     <div class="col">
@@ -15,11 +18,13 @@
 
 <article class="card">
   <div class="d-grid gap-2 card text-white bg-primary">
-  <button class="btn btn-primary" type="button">Recommended Workout Based on Chosen Goal</button>
-  <button class="btn btn-primary" type="button">Create New Log</button>
+
+  <button class="btn btn-primary workout-btn" type="button">Recommended Workout Based on Chosen Goal</button>
+  <a href="/log"><button class="btn btn-primary" type="button">Create New Log</button></a> 
 </div>
 
-</article>
+{{!-- </article>
+
 <div class="container">
    <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
     <div class="col">
@@ -31,12 +36,18 @@
     <div class="col">
       <button class="text-center p-5 border bg-light">Log</button>
     </div>
-  </div>
+
+  </div> --}}
 </div>
-<div class="container">
+<div class="container ">
   <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
-    <div class="col">
-      <button class=" text-center p-5 border bg-light">Log</button>
+     {{#if logs.length}}
+    <div class="col logs-list">
+        <h3>Current Logs:</h3>
+         {{#each logs as |log|}}
+      {{!-- <button class=" text-center p-5 border bg-light">Log</button> --}}
+       <h4><a href="/api/users/{{log_date}}">{{log_date}}</a></h4>
+
     </div>
     <div class="col">
       <button class=" text-center p-5 border bg-light">Log</button>
@@ -44,7 +55,11 @@
     <div class="col">
       <button class="text-center p-5 border bg-light">Log</button>
     </div>
+
+     {{/each}}
   </div>
+    {{/if}}
 </div>
 
 <script src="./js/diary.js"></script>
+

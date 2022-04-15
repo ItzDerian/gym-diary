@@ -22,7 +22,9 @@ router.get('/:date', withAuth, async (req, res) => {
         attributes: ['exercise', 'targetArea'],
       },
       where: [
+
         sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date),
+
         // for when session is set up
         {user_id: req.session.user_id},
 
@@ -36,6 +38,7 @@ router.get('/:date', withAuth, async (req, res) => {
     console.log(dailyLog);
 
     // // render in handlebars
+
     res.render('log', {
       ...dailyLog,
       logged_in: req.session.logged_in
