@@ -19,7 +19,9 @@ router.get('/', async (req, res) => {
 
 router.get('/diary', withAuth, async (req, res) => {
   try {
-    console.log('test4');
+
+    console.log('test1');
+
     // get all rows by user_id
     const userLog = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['id', 'password', 'email', 'date_of_birth', 'height'] },
@@ -28,12 +30,16 @@ router.get('/diary', withAuth, async (req, res) => {
           model: Log,
           attributes: [
             'id',
+
             [sequelize.fn('DATE', sequelize.col('log_date')), 'log_date'], 
+
             'sets',
             'reps',
             'weight',
             'calBurned'
-],
+
+          ],
+
           include: {
             model: Exercise,
             attributes: ['exercise'],
@@ -41,7 +47,9 @@ router.get('/diary', withAuth, async (req, res) => {
         },
       ],
     });
-    console.log('test5');
+
+    console.log('test2');
+
     // Serialize data so the template can read it
     const user = userLog.get({ plain: true });
     const logs = user.logs.map(el => el);
