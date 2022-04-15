@@ -27,23 +27,23 @@
   </form>
 </div>
 
-{{!--<div>
-  {{#if submit-workout-btn}}
+<div>
+
   <div class="col-md-6 project-list">
     <h3>Current Projects:</h3>
 
-    {{#each logs as |log|}}
+    {{#each logs}}
     <div class="row mb-2">
-      <div clsas ="col-md-8">
-        <h4><a href="/log/{{log.id}}">{{log.Sets}} </a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{log.sets}}">DELETE</button>
+      <div class ="col-md-8">
+        
+        <h4> Sets Done : {{sets}}</h4>
+        <h4>Reps done : {{reps}}</h4>
+        <h4>Calories burned : {{calBurned}}</h4>
       </div>
     </div>
     {{/each}}
   </div>
-  {{/if}}
-</div>--}}
+
+</div>
 
 <script src="/js/logscript.js"></script>
