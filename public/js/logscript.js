@@ -51,7 +51,7 @@ const newFormHandler = async (event) => {
 
   const userBW = weight;
   // console.log(userExercise);
-  const calBurned;
+  let calBurned;
 
   if (exercise === 'Situps') {
     calBurned = (2.65 * userBW * 3.5) / 200;
