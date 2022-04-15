@@ -20,8 +20,8 @@ const newFormHandler = async (event) => {
     // const name = document.querySelector('#project-name').value
 
     if (log_date && reps && sets && weight && calBurned ) {
-        const response = await fetch(`/api/diary`, {
-          method: 'POST',
+        const response = await fetch(`/api/users/{{log_date}}`, {
+          method: 'GET',
           body: JSON.stringify({ log_date, reps, sets, weight, calBurned }),
           headers: {
             'Content-Type': 'application/json',
