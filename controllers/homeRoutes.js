@@ -6,7 +6,7 @@ const sequelize = require('../config/connection');
 // main page routes: 'http://localhost:PORT/'
 // 'req.session.logged_in = true' required (withAuth)
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
 // render homepage
     res.render('homepage', {
@@ -106,6 +106,18 @@ router.get('/log', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// render login page - from handlebars?
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  // render login page
+  res.render('signup');
 });
 
 // render login page - from handlebars?
