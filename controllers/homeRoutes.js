@@ -28,7 +28,7 @@ router.get('/diary', withAuth, async (req, res) => {
           model: Log,
           attributes: [
             'id',
-            [sequelize.fn('FORMAT_DATE', sequelize.col('log_date'), '%m-%d-%y'), 'log_date'],
+            [sequelize.fn('DATE', sequelize.col('log_date')), 'log_date'],
             'sets',
             'reps',
             'weight',
