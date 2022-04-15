@@ -8,7 +8,7 @@ const sequelize = require('../config/connection');
 
 router.get('/', async (req, res) => {
   try {
-// render homepage
+    // render homepage
     res.render('homepage', {
       logged_in: req.session.logged_in,
     });
@@ -19,12 +19,13 @@ router.get('/', async (req, res) => {
 
 router.get('/diary', withAuth, async (req, res) => {
   try {
-
     console.log('test1');
 
     // get all rows by user_id
     const userLog = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['id', 'password', 'email', 'date_of_birth', 'height'] },
+      attributes: {
+        exclude: ['id', 'password', 'email', 'date_of_birth', 'height'],
+      },
       include: [
         {
           model: Log,
@@ -36,8 +37,7 @@ router.get('/diary', withAuth, async (req, res) => {
             'sets',
             'reps',
             'weight',
-            'calBurned'
-
+            'calBurned',
           ],
 
           include: {
@@ -52,7 +52,7 @@ router.get('/diary', withAuth, async (req, res) => {
 
     // Serialize data so the template can read it
     const user = userLog.get({ plain: true });
-    const logs = user.logs.map(el => el);
+    const logs = user.logs.map((el) => el);
     console.log(logs);
     // render data in handlebars
     res.render('diary', {
@@ -72,12 +72,7 @@ router.get('/log', withAuth, async (req, res) => {
     const date = d.toISOString().split('T')[0];
 
     const dailyLog = await Log.findAll({
-      attributes: [
-        'log_date',
-        'sets',
-        'reps',
-        'calBurned'
-      ],
+      attributes: ['log_date', 'sets', 'reps', 'calBurned'],
       include: {
         model: Exercise,
         attributes: ['exercise', 'targetArea'],
@@ -85,21 +80,21 @@ router.get('/log', withAuth, async (req, res) => {
       where: [
         sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), date),
         // for when session is set up
-        {user_id: req.session.user_id},
-      ]
+        { user_id: req.session.user_id },
+      ],
     });
     // console.log(dailyLog)
 
     // // serialize the data
-    const logs = dailyLog.map(log => log.get({ plain: true }));
+    const logs = dailyLog.map((log) => log.get({ plain: true }));
 
     // console.log(logs);
 
     const exercise = await Exercise.findAll();
     // console.log('exercise111', exercise.length);
-    
+
     // render in handlebars
-    
+
     console.log({
       logs,
       logged_in: req.session.logged_in,
