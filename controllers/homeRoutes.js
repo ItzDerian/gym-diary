@@ -31,7 +31,7 @@ router.get('/diary', withAuth, async (req, res) => {
           attributes: [
             'id',
 
-            [sequelize.fn('DATE', sequelize.col('log_date')), 'log_date'], 
+            [sequelize.fn('DATE', sequelize.col('log_date')), 'log_date'],
 
             'sets',
             'reps',

@@ -28,8 +28,6 @@ router.get('/:date', withAuth, async (req, res) => {
         // for when session is set up
         {user_id: req.session.user_id},
 
-        // // for testing:
-        // {user_id: req.params.id}
       ]
     });
     console.log(logs)
@@ -39,7 +37,8 @@ router.get('/:date', withAuth, async (req, res) => {
 
     console.log(dailyLog);
 
-    // render in handlebars
+    // // render in handlebars
+
     res.render('log', {
       ...dailyLog,
       logged_in: req.session.logged_in
