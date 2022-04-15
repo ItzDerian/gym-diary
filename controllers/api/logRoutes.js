@@ -12,16 +12,17 @@ router.get('/:date', withAuth, async (req, res) => {
       attributes: [
         'id',
         'user_id',
-        'log_date', 
-        'sets', 
-        'reps'
+        'log_date',
+        'sets',
+        'reps',
+        'calBurned'
       ],
       include: {
         model: Exercise,
         attributes: ['exercise', 'targetArea'],
       },
       where: [
-        sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date), 
+        sequelize.where(sequelize.fn('DATE', sequelize.col('log_date')), req.params.date),
         // for when session is set up
         {user_id: req.session.user_id},
 
@@ -36,11 +37,11 @@ router.get('/:date', withAuth, async (req, res) => {
 
     console.log(dailyLog);
 
-    // // render in handlebars
-    // res.render('logentry', {
-    //   ...dailyLog,
-    //   logged_in: req.session.logged_in
-    // });
+    // render in handlebars
+    res.render('log', {
+      ...dailyLog,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -49,11 +50,13 @@ router.get('/:date', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     // create new row 
+    console.log(req.body);
+    console.log("test1");
     const newLog = await Log.create({
       ...req.body,
       user_id: req.session.user_id,
     });
-
+    console.log("test2")
     // either reroute or render
 
     res.status(200).json();

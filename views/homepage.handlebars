@@ -1,6 +1,9 @@
 <section class="hero">
-  <h2 style="color: white">Log Your Fitness Goals With Gym Diary</h2>
-  <h3>Already a member of our community? <a href="/login">Sign In</a></h3>
+  <h2>Come and Log Your Fitness Goals {{user.Name}}</h2>
+  <h2>With Gym Diary</h2>
+  {{#unless logged_in}}
+  <h3>Not a member of our community? <a href="/signup">Sign up</a></h3>
+  {{/unless}}
 
   <div class="homepage-img">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBbw3m9i5P-Ham5C0OH2lR9ReZQP-GYd3tA&usqp=CAU" class="img-fluid" alt="people running in gym image" height="300" width="1000"> 

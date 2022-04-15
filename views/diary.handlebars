@@ -1,19 +1,57 @@
-   
-   <div class="log-container fluid" 
-   <p class="log-date">Date: <span id="date-log"></span>
-            </p>
-   <div class="log-details">
-            <p class="exercise-log">Exercise: <span id="exercise-log"></span>
-            </p>
-             <p class="reps-log">Reps: <span id="reps-log"></span>
-            </p>
-             <p class="sets-log">Sets: <span id="sets-log"></span>
-            </p>
-             <p class="weight-log">Weight: <span id="weight-log"></span>
-            </p>
-             <p class="cals-log">Estimated Calories Burned:  <span id="cals-log"></span>
-            </p>
-        </div>
+<h2 class ="text-center hello">Hello - {{user.name}}<span>Week XXXX</span></h2>
+<div class="container">
+  <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+    <div class="col">
+      <button class=" text-center p-5 border bg-light">Weight</button>
+    </div>
+    <div class="col">
+      <button class=" text-center p-5 border bg-light">Height</button>
+    </div>
+    <div class="col">
+      <button class="text-center p-5 border bg-light">Log</button>
+    </div>
+  </div>
+</div>
 
+<article class="card">
+  <div class="d-grid gap-2 card text-white bg-primary">
+  <button class="btn btn-primary" type="button">Recommended Workout Based on Chosen Goal</button>
+  <button class="btn btn-primary" type="button">Create New Log</button>
+</div>
 
-        <script src="./js/diary.js"></script>
+</article>
+<div class="container">
+   <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+    <div class="col">
+      <button class="text-center p-5 border bg-light">Log</button>
+    </div>
+    <div class="col">
+      <button class="text-center p-5 border bg-light">Log</button>
+    </div>
+    <div class="col">
+      <button class="text-center p-5 border bg-light">Log</button>
+    </div>
+  </div>
+</div>
+<div class="container ">
+  <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+     {{#if logs.length}}
+    <div class="col logs-list">
+        <h3>Current Logs:</h3>
+         {{#each logs as |log|}}
+      {{!-- <button class=" text-center p-5 border bg-light">Log</button> --}}
+       <h4><a href="/api/logs/{{log_date}}"></a></h4>
+    </div>
+    <div class="col">
+      <button class=" text-center p-5 border bg-light">Log</button>
+    </div>
+    <div class="col">
+      <button class="text-center p-5 border bg-light">Log</button>
+    </div>
+     {{/each}}
+  </div>
+    {{/if}}
+</div>
+
+<script src="./js/diary.js"></script>
+

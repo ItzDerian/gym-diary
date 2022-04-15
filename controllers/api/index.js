@@ -5,7 +5,7 @@ const test = require('./testRoutes');
 
 // require Auth
 router.use('/users', userRoutes);
-router.use('./logs', logRoutes);
+router.use('/logs', logRoutes);
 
 // test routes - don't require Auth
 router.use('/test', test);

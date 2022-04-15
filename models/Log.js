@@ -31,8 +31,12 @@ Log.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    exercise_minutes: {
+    weight: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    calBurned: {
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     user_id: {

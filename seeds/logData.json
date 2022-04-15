@@ -3,322 +3,336 @@
   "exercise_id": 1,
   "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 15,
+  "weight": 0,
+  "calBurned" : 15,
   "user_id": 1
   },
   {
   "exercise_id": 2,
   "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 15,
+  "weight": 0,
+  "calBurned" : 15,
   "user_id": 1
   },
   {
   "exercise_id": 3,
    "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 15,
+  "weight": 0,
+  "calBurned" : 15,
   "user_id": 1
   },
   {
   "exercise_id": 4,
   "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 15,
+  "weight": 0,
+  "calBurned" : 15,
   "user_id": 1
   },
   {
   "exercise_id": 5,
   "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 15,
+  "weight": 0,
+  "calBurned" : 15,
   "user_id": 1
   },
   {
   "exercise_id": 6,
   "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 15,
+  "weight": 0,
+  "calBurned" : 15,
   "user_id": 1
   },
   {
   "exercise_id": 7,
   "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 15,
+  "weight": 0,
+  "calBurned" : 15,
   "user_id": 1
   },
   {
-  "exercise_id": 8,
-  "sets": 4,
-  "reps": 8,
-  "exercise_minutes" : 15,
-  "user_id": 1
-  },
-  {
-  "exercise_id": 9,
+  "exercise_id": 1,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 2
   },
   {
-  "exercise_id": 10,
+  "exercise_id": 2,
   "sets": 4,
   "reps": 8,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 2
   },
   {
-  "exercise_id": 11,
+  "exercise_id": 3,
   "sets": 5,
   "reps": 8,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 2
   },
   {
-  "exercise_id": 12,
+  "exercise_id": 4,
   "sets": 2,
   "reps": 12,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 2
   },
   {
-  "exercise_id": 13,
+  "exercise_id": 5,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 2
   }, 
   {
-  "exercise_id": 14,
+  "exercise_id": 6,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 2
   },      
   {
-  "exercise_id": 15,
+  "exercise_id": 7,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 2
   },  
   {
-  "exercise_id": 16,
+  "exercise_id": 1,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 20,
+  "weight": 0,
+  "calBurned" : 20,
   "user_id": 3
   },  
   {
-  "exercise_id": 17,
+  "exercise_id": 2,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 10,
+  "weight": 0,
+  "calBurned" : 10,
   "user_id": 3
   }, 
   {
-  "exercise_id": 18,
+  "exercise_id": 3,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 10,
+  "weight": 0,
+  "calBurned" : 10,
   "user_id": 3
   }, 
   {
-  "exercise_id": 19,
+  "exercise_id": 4,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 10,
+  "weight": 0,
+  "calBurned" : 10,
   "user_id": 3
   }, 
   {
-  "exercise_id": 20,
+  "exercise_id": 5,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 10,
+  "weight": 0,
+  "calBurned" : 10,
   "user_id": 3
   },
   {
-  "exercise_id": 21,
+  "exercise_id": 6,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 10,
+  "weight": 0,
+  "calBurned" : 10,
   "user_id": 3
   },  
   {
-  "exercise_id": 22,
+  "exercise_id": 7,
   "sets": 3,
   "reps": 10,
-  "exercise_minutes" : 10,
+  "weight": 0,
+  "calBurned" : 10,
   "user_id": 3
   },
-  {
-  "exercise_id": 23,
-  "sets": 3,
-  "reps": 10,
-  "exercise_minutes" : 10,
-  "user_id": 3
-  }, 
   {
     "exercise_id": 1,
     "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 10,
+    "weight": 0,
+    "calBurned" : 10,
     "user_id": 4
     },
     {
     "exercise_id": 2,
     "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 10,
+    "weight": 0,
+    "calBurned" : 10,
     "user_id": 4
     },
     {
     "exercise_id": 3,
      "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 10,
+    "weight": 0,
+    "calBurned" : 10,
     "user_id": 4
     },
     {
     "exercise_id": 4,
     "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 10,
+    "weight": 0,
+    "calBurned" : 10,
     "user_id": 4
     },
     {
     "exercise_id": 5,
     "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 10,
+    "weight": 0,
+    "calBurned" : 10,
     "user_id": 4
     },
     {
     "exercise_id": 6,
     "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 10,
+    "weight": 0,
+    "calBurned" : 10,
     "user_id": 4
     },
     {
     "exercise_id": 7,
     "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 10,
+    "weight": 0,
+    "calBurned" : 10,
     "user_id": 4
     },
     {
-    "exercise_id": 8,
-    "sets": 4,
-    "reps": 8,
-    "exercise_minutes" : 10,
-    "user_id": 4
-    },
-    {
-    "exercise_id": 9,
+    "exercise_id": 1,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 15,
+    "weight": 0,
+    "calBurned" : 15,
     "user_id": 5
     },
     {
-    "exercise_id": 10,
+    "exercise_id": 2,
     "sets": 4,
     "reps": 8,
-    "exercise_minutes" : 15,
+    "weight": 0,
+    "calBurned" : 15,
     "user_id": 5
     },
     {
-    "exercise_id": 11,
+    "exercise_id": 3,
     "sets": 5,
     "reps": 8,
-    "exercise_minutes" : 15,
+    "weight": 0,
+    "calBurned" : 15,
     "user_id": 5
     },
     {
-    "exercise_id": 12,
+    "exercise_id": 4,
     "sets": 2,
     "reps": 12,
-    "exercise_minutes" : 15,
+    "weight": 0,
+    "calBurned" : 15,
     "user_id": 5
     },
     {
-    "exercise_id": 13,
+    "exercise_id": 5,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 15,
+    "weight": 0,
+    "calBurned" : 15,
     "user_id": 5
     }, 
     {
-    "exercise_id": 14,
+    "exercise_id": 6,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 15,
+    "weight": 0,
+    "calBurned" : 15,
     "user_id": 5
     },      
     {
-    "exercise_id": 15,
+    "exercise_id": 7,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 15,
+    "weight": 0,
+    "calBurned" : 15,
     "user_id": 5
     },  
     {
-    "exercise_id": 16,
+    "exercise_id": 1,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 15,
-    "user_id": 6
-    },  
-    {
-    "exercise_id": 17,
-    "sets": 3,
-    "reps": 10,
-    "exercise_minutes" : 20,
+    "weight": 0,
+    "calBurned" : 20,
     "user_id": 6
     }, 
     {
-    "exercise_id": 18,
+    "exercise_id": 2,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 20,
+    "weight": 0,
+    "calBurned" : 20,
     "user_id": 6
     }, 
     {
-    "exercise_id": 19,
+    "exercise_id": 3,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 20,
+    "weight": 0,
+    "calBurned" : 20,
     "user_id": 6
     }, 
     {
-    "exercise_id": 20,
+    "exercise_id": 4,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 20,
+    "weight": 0,
+    "calBurned" : 20,
     "user_id": 6
     },
     {
-    "exercise_id": 21,
+    "exercise_id": 5,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 20,
+    "weight": 0,
+    "calBurned" : 20,
     "user_id": 6
     },  
     {
-    "exercise_id": 22,
+    "exercise_id": 6,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 20,
+    "weight": 0,
+    "calBurned" : 20,
     "user_id": 6
     },
     {
-    "exercise_id": 23,
+    "exercise_id": 7,
     "sets": 3,
     "reps": 10,
-    "exercise_minutes" : 20,
+    "weight": 0,
+    "calBurned" : 20,
     "user_id": 6
     }                                 
 ]
