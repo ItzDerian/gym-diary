@@ -1,42 +1,54 @@
-<section class="hero">
-  <h2>Come and Log Your Fitness Goals {{user.Name}}</h2>
-  <h2>With Gym Diary</h2>
-  {{#unless logged_in}}
-  <h3>Not a member of our community? <a href="/signup">Sign up</a></h3>
-  {{/unless}}
+<div class="hero">
+  <div class="text">
+    <h1>Start tracking your
+      <br>daily work outs</br>
+    </h1>
+    
+    <p>We provide a web app that allows you to track just that</p>
 
-  <div class="homepage-img">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBbw3m9i5P-Ham5C0OH2lR9ReZQP-GYd3tA&usqp=CAU" class="img-fluid" alt="people running in gym image" height="300" width="1000"> 
+    <a href="/signup" class="btn btn-primary btn-login btn-rounded">Sign Up</a>
   </div>
 
+  <div class="hero-image">
+    <a><img src="https://i.imgur.com/3UZWeV9.png" title="source: imgur.com" /></a>
+  </div>
 
+</div>
 
-<section class="youtube-api">
+<div class="section2">
+  <h2>Track multiple metrics</h2>
+  
+  <ul>
+    <li>
+      <img src="https://i.imgur.com/sySDe1q.png">
+      <p>Cardio</p>
+    </li>
+    <li>
+      <a href="https://imgur.com/HXuUHkU"><img src="https://i.imgur.com/HXuUHkU.png" title="source: imgur.com" /></a>
+      <p>Arms</p>
+    </li>
+    <li>
+      <a href="https://imgur.com/pSLR2Qo"><img src="https://i.imgur.com/pSLR2Qo.png" title="source: imgur.com" /></a>
+      <p>Calories</p>
+    </li>
+  </ul>
+</div>
+
+<div class="youtube-api">
   <p class="player-text">Recommended Exercises</p>
-  <iframe id="player" type="text/html" width="640" height="390"
-  src="https://www.youtube.com/embed/WBm7reVcWlM?start=1&autoplay=1" title="YouTube video player" frameborder="0" style="border: solid 6px #faa23d"></iframe>
-</section>
+  <ul>
+    <li> <iframe id="player" type="text/html" width="640" height="390"
+  src="https://www.youtube.com/embed/WBm7reVcWlM?start=1&autoplay=1" title="YouTube video player" frameborder="0" style="border: solid 6px #faa23d"></iframe></li>
+    <li><iframe id="player" type="text/html" width="640" height="390"
+  src="https://www.youtube.com/embed/_OBjsswn32s" title="YouTube video player" frameborder="0" style="border: solid 6px #faa23d"></iframe></li>
+    <li><iframe id="player" type="text/html" width="640" height="390"
+  src="https://www.youtube.com/watch?v=_OBjsswn32s?start=1&autoplay=1" title="YouTube video player" frameborder="0" style="border: solid 6px #faa23d"></iframe></li>
+  </ul>
+ 
 
+  
 
-
-{{#if logged_in}}
-  <script src="/js/logout.js"></script>
-{{/if}}
-</body>
-
-<footer>
-  <span class="f-home">
-    <h3><a href="/">Home</a></h3>
-  </span>
-  <span class="f-exercises">
-   <h3><a href="/log">Log</a></h3>
-  </span>
-   <span class="f-exercises">
-   <h3><a href="/diary">Diary</a></h3>
-  </span>
-  <span class="f-GitHub">
-    <h3><a href="https://github.com/ItzDerian/gym-diary.git" target="_blank" >Support</a></h3>
-  </span>
-</footer>
+  
+</div>
 
  <script src="./js/youtubescript.js"></script>
