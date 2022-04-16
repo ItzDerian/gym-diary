@@ -23,7 +23,9 @@ router.get('/diary', withAuth, async (req, res) => {
 
     // get all rows by user_id
     const userLog = await User.findByPk(req.session.user_id, {
-      attributes: ['name'],
+      attributes: {
+        exclude: ['id', 'password', 'email', 'date_of_birth', 'height'],
+      },
       include: [
         {
           model: Log,
@@ -50,11 +52,10 @@ router.get('/diary', withAuth, async (req, res) => {
 
     // Serialize data so the template can read it
     const user = userLog.get({ plain: true });
-    const logs = user.logs.map(el => el);
-    console.log(user.name);
+    const logs = user.logs.map((el) => el);
+    console.log(logs);
     // render data in handlebars
     res.render('diary', {
-      user,
       logs,
       logged_in: req.session.logged_in,
     });
