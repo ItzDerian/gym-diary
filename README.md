@@ -17,9 +17,6 @@ Application uses Node.js, Express.js, Handlebars.js, MYSQL and Sequelize
 ## Visual
 See deployed application: https://tranquil-reaches-54677.herokuapp.com' on Heroku
 
-<img src="./assets/mockup1.png" alt="Diary">
-<img src="./assets/mockup2.png" alt="Homepage">
-<img src="./assets/mockup3.png" alt="Log">
 
 ## Contact / Questions
 
