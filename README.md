@@ -15,9 +15,11 @@ SO THAT I can customize my workout and maximize my results
 Application uses Node.js, Express.js, Handlebars.js, MYSQL and Sequelize
 
 ## Visual
-See deployed application [here]() on Heroku
+See deployed application: https://tranquil-reaches-54677.herokuapp.com' on Heroku
 
-![screenshot]()
+<img src="./assets/mockup1.png" alt="Diary">
+<img src="./assets/mockup2.png" alt="Homepage">
+<img src="./assets/mockup3.png" alt="Log">
 
 ## Contact / Questions
 
