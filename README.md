@@ -5,7 +5,7 @@ Gym Diary is a fully responsive application that allows gym users to track worko
 
 ## User Story
 AS A user with workout goals
-I WANT to be able to sign into an app and see what workouts are helping me achieve my body and calorie burning goals
+I WANT to be able to sign into a app and see what workouts are helping me achieve my body and calorie burning goals
 SO THAT I can customize my workout and maximize my results
 
 ## Installation
