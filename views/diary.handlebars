@@ -4,12 +4,12 @@
 
 <div class="container">
   <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
-    <div class="col">
+    {{!-- <div class="col">
       <button class=" text-center p-5 border bg-light">Weight</button>
     </div>
     <div class="col">
       <button class=" text-center p-5 border bg-light">Height</button>
-    </div>
+    </div> --}}
   </div>
 </div>
 
@@ -31,48 +31,3 @@
 
 
 
-
-
-{{!-- <article class="card">
-  <div class="d-grid gap-2 card text-white bg-primary">
-
-  {{!-- <button class="btn btn-primary workout-btn" type="button">Recommended Workout Based on Chosen Goal</button> --}}
-  <a href="/log"><button class="btn btn-primary" type="button">Create New Log</button></a> 
-</div> --}}
-
-{{!-- </article>
-
-<div class="container">
-   <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
-    <div class="col">
-      <button class="text-center p-5 border bg-light">Log</button>
-    </div>
-    <div class="col">
-      <button class="text-center p-5 border bg-light">Log</button>
-    </div>
-    <div class="col">
-      <button class="text-center p-5 border bg-light">Log</button>
-    </div>
-
-  </div> --}}
-{{!-- <div class="container ">
-  <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
-     {{#if logs.length}}
-    <div class="col-3 logs-list">
-        <h3>Weekly Logs:</h3>
-         {{#each logs as |log|}}
-       <h4><a href="/api/logs/{{log_date}}">{{log_date}}</a></h4>
-    </div>
-    <div class="col-3">
-         <h4><a href="/api/logs/{{log_date}}">{{log_date}}</a></h4>
-    </div>
-    <div class="col-3">
-        <h4><a href="/api/logs/{{log_date}}">{{log_date}}</a></h4>
-    </div>
-
-     {{/each}}
-  </div>
-    {{/if}}
-</div> --}}
-
- {{!-- <button class=" text-center p-5 border bg-light">Log</button> --}}
