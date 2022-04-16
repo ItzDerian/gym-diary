@@ -88,7 +88,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/log');
+      document.location.replace('/diary');
     } else {
       alert('Failed to create workout');
     }
